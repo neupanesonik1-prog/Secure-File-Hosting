@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <style>
+    body { font-family: Arial; margin: 50px; background: #e8f5e8; text-align: center; }
+    button { padding: 10px 20px; background: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Your Dashboard</h1>
+  <h2>You are logged in!</h2>
+  <p>Day 1 Completed Successfully</p>
+  <button onclick="localStorage.clear(); location.href='login.html'">Logout</button>
+  <hr>
+  <h3>Tomorrow: File Upload + Public/Private + MongoDB</h3>
+
+  <script>
+    if (!localStorage.getItem('token')) {
+      alert('Please login first!');
+      location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>
